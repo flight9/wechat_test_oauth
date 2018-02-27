@@ -1,0 +1,32 @@
+<!doctype html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">  
+    <title>微信测试页面</title>  
+    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>  
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script> 
+	<script>
+		$(function () {
+			let param = {
+				debug: true,
+				jsApiList: ['chooseImage', 'uploadImage', 'scanQRCode', 'getLocalImgData'],
+				url: window.location.href.split('#')[0]
+			}
+			$.ajax({  
+                url: '/wechat/jsconfig',  
+                type: 'POST',  
+                data: param,  
+                datatype: 'json',  
+                success: function (data) {  
+					wx.config(data)					
+                }  
+            })  
+		})
+	</script>
+</head>
+<body>
+<h2>这里是一个测试 jssdk 页面。</h2>
+</body>
+</html>
+

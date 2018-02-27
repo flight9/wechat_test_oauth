@@ -1,0 +1,18 @@
+{
+  "name": "wechat_test_oauth",
+  "version": "1.0.0",
+  "description": "test wechat-oauth",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "startwin": "node %NODE_DEBUG_OPTION% ./app.js"
+  },
+  "author": "liang",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "wechat-api": "^1.35.1",
+    "wechat-oauth": "^1.2.1"
+  }
+}
