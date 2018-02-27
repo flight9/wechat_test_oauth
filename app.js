@@ -137,5 +137,5 @@ app.get('/testtemplate', function (req, res, next) {
 //----------------------------------------------------
 
 app.listen(1234, function() {
-	console.info('Listening: 1234')
+	console.info('Listening on: 1234')
 })
