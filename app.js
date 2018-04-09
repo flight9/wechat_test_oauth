@@ -3,6 +3,7 @@
 var express = require('express')
 var fs = require('fs')
 var bodyParser = require('body-parser')
+var wx_config = require('./wx_config')
 
 var app = express()
 app.use(bodyParser.json()) // for parsing application/json
@@ -14,8 +15,8 @@ app.get('/jstest', function(req, res) {
 	res.sendFile(__dirname+ '/views/jstest.html')
 })
 
-var appId = 'wx32e64b2b2f8f20df'
-var appSecret = '905848f29979a4859d2468f76626aa88'
+var appId = wx_config.appId
+var appSecret = wx_config.appSecret
 
 //---OAuthApi-----------------------------------------
 var OAuth = require('wechat-oauth') 
